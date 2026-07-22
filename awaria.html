@@ -1,106 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zgłoś awarię — Świetlik Internet</title>
-<link rel="stylesheet" href="style.css">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('consent', 'default', {
-    ad_storage: 'denied', analytics_storage: 'denied',
-    ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500
-  });
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-<!-- End Google Tag Manager -->
-</head>
-<body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zgłoś awarię — Świetlik Internet</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        wait_for_update: 500,
+      });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-52JJTJSR");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-52JJTJSR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo"><span class="logo-dot"></span> Świetlik</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Strona główna</a></li>
-      <li><a href="oferta.html">Oferta</a></li>
-      <li><a href="o-nas.html">O nas</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="awaria.html">Zgłoś awarię</a></li>
-      <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero" style="padding-bottom:20px;">
-  <div class="wrap" style="max-width:680px;">
-    <span class="eyebrow">Serwis</span>
-    <h1>Zgłoś awarię</h1>
-    <p>Podaj adres i krótko opisz problem — technik skontaktuje się w ciągu 4 godzin roboczych.</p>
-  </div>
-</header>
-
-<section>
-  <div class="wrap">
-    <form id="outage-form" class="form-panel">
-      <div class="field">
-        <label for="o-address">Adres instalacji</label>
-        <input type="text" id="o-address" name="address" required placeholder="ul. Przykładowa 12, Wieliczka">
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="logo"
+          ><span class="logo-dot"></span> Świetlik</a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="o-nas.html">O nas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="awaria.html">Zgłoś awarię</a></li>
+          <li><a href="kontakt.html" class="nav-cta">Kontakt</a></li>
+        </ul>
       </div>
-      <div class="field">
-        <label for="o-priority">Priorytet</label>
-        <select id="o-priority" name="priority">
-          <option value="low">Niski — internet działa, ale wolno</option>
-          <option value="medium">Średni — internet często się rozłącza</option>
-          <option value="high">Wysoki — brak internetu</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="o-description">Opis problemu</label>
-        <textarea id="o-description" name="description" placeholder="Od kiedy występuje problem? Co już próbowałeś/aś?"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" data-gtm-cta="awaria-zglos">Zgłoś awarię</button>
-      <div id="outage-msg" class="form-msg"></div>
-    </form>
-  </div>
-</section>
+    </nav>
 
-<footer>
-  <div class="wrap footer-grid">
-    <div>
-      <a href="index.html" class="logo"><span class="logo-dot"></span> Świetlik</a>
-      <div class="social-links">
-        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+    <header class="hero" style="padding-bottom: 20px">
+      <div class="wrap" style="max-width: 680px">
+        <span class="eyebrow">Serwis</span>
+        <h1>Zgłoś awarię</h1>
+        <p>
+          Podaj adres i krótko opisz problem — technik skontaktuje się w ciągu 4
+          godzin roboczych.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <form id="outage-form" class="form-panel">
+          <div class="field">
+            <label for="o-address">Adres instalacji</label>
+            <input
+              type="text"
+              id="o-address"
+              name="address"
+              required
+              placeholder="ul. Przykładowa 12, Wieliczka"
+            />
+          </div>
+          <div class="field">
+            <label for="o-priority">Priorytet</label>
+            <select id="o-priority" name="priority">
+              <option value="low">Niski — internet działa, ale wolno</option>
+              <option value="medium">
+                Średni — internet często się rozłącza
+              </option>
+              <option value="high">Wysoki — brak internetu</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="o-description">Opis problemu</label>
+            <textarea
+              id="o-description"
+              name="description"
+              placeholder="Od kiedy występuje problem? Co już próbowałeś/aś?"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            data-gtm-cta="awaria-zglos"
+          >
+            Zgłoś awarię
+          </button>
+          <div id="outage-msg" class="form-msg"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a href="index.html" class="logo"
+            ><span class="logo-dot"></span> Świetlik</a
+          >
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+              >Facebook</a
+            >
+            <a href="https://www.instagram.com" target="_blank" rel="noopener"
+              >Instagram</a
+            >
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="o-nas.html">O nas</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="tel:+48123456789">tel. 12 345 67 89</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner">
+      <p>
+        Używamy plików cookie do analityki i marketingu. Możesz zaakceptować
+        wszystkie, odrzucić, albo dostosować wybór.
+      </p>
+      <div class="consent-actions">
+        <button id="consent-reject" class="btn btn-ghost">Odrzuć</button>
+        <button id="consent-customize" class="btn btn-ghost">
+          Tylko analityka
+        </button>
+        <button id="consent-accept" class="btn btn-primary">
+          Akceptuję wszystkie
+        </button>
       </div>
     </div>
-    <ul class="footer-links">
-      <li><a href="oferta.html">Oferta</a></li>
-      <li><a href="o-nas.html">O nas</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="tel:+48123456789">tel. 12 345 67 89</a></li>
-    </ul>
-  </div>
-</footer>
 
-<div id="consent-banner" class="consent-banner">
-  <p>Używamy plików cookie do analityki i marketingu. Możesz zaakceptować wszystkie, odrzucić, albo dostosować wybór.</p>
-  <div class="consent-actions">
-    <button id="consent-reject" class="btn btn-ghost">Odrzuć</button>
-    <button id="consent-customize" class="btn btn-ghost">Tylko analityka</button>
-    <button id="consent-accept" class="btn btn-primary">Akceptuję wszystkie</button>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
